@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import NavLinks from './Components/Navigation';
+import DetailBox from './Components/DetailBox';
+import ImageBox from './Components/ImageBox';
+import About from './Components/pages/About'
+import Home from './Components/pages/Home'
+import Skills from './Components/pages/Skills'
+import Projects from './Components/pages/Projects'
+import Contact from './Components/pages/Contact'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './Components/Navigation';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+<div className='flex flex-col lg:flex-row-reverse justify-center items-center'>
+<Navigation></Navigation>
+<ImageBox></ImageBox>
+<DetailBox></DetailBox>
+</div>
+
   )
 }
 
