@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@media screen and (min-width: 950px) {
+  #largescreen{
+    display: flex;
+  }
+  #smallscreen{
+    display:none;
+  }
+}
+@media screen and (max-width: 950px) {
+  #largescreen{
+    display: none;
+  }
+  #smallscreen{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #stick{
+    position: fixed;
+    top:0;
+    right:0;
+  }
+
+}

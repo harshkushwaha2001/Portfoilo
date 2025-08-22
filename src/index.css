@@ -1,16 +1,25 @@
 @import "tailwindcss";
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
   box-sizing: border-box;
 }
 
 body {
-   background-image: url("/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;           
-  background-position: center;      
-  background-attachment: fixed;   
+  min-height: 100vh;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Chrome, Safari, Edge */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
 }

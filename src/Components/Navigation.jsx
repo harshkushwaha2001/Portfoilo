@@ -7,17 +7,20 @@ export default function Navigation() {
     {name:"ABOUT", path:"/about"},
     {name:"SKILLS", path:"/skills"},
     {name:"PROJECTS", path:"/projects"},
+    {name:"PERSONAL", path:"/personal"},
     {name:"CONTACT", path:"/contact"},
    
   ]
-  const btnstyle="transition-discrete transition-all bg-white-400/50 backdrop-blur-sm border-3 focus:outline-hidden border-blue-500 border-double outline-1 h-[30px] w-[100px] justify-center flex rounded-xl justify-center items-center flex";
+  const btnstyle=" rotate-90 mt-10 w-20 h-10 backdrop-blur-sm bg-blue-400/10 flex justify-center items-center rounded-xl -ml-8 -mr-3"; 
+
 const handleClick=()=>{
-    const el = document.getElementById('page');
+    const el = document.getElementById('det');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
   return (
-    <div  className='flex  sticky top-1 flex-row lg:flex-col gap-8 lg:absolute justify-center items-center lg:top-68 lg:right-90 z-50'>
-       { ls.map((obj)=>(<NavLink onClick={handleClick}className={({isActive})=>isActive?`${btnstyle} bg-white text-black`:`${btnstyle} text-white`} key = {obj.name} to={obj.path}>{obj.name}</NavLink>))}
+    <div  className='flex flex-col transform gap-5 z-5 overflow-visible max-[950px]:-mr-4'>
+       { ls.map((obj)=>(<NavLink onClick={handleClick}className={({isActive})=>isActive?`${btnstyle} border-1 text-black bg-white`:`${btnstyle} text-white  border-1 `} key = {obj.name} to={obj.path}>{obj.name}</NavLink>))}
     </div>
   )
 }
+// {mt-2  -translate-x-5}
