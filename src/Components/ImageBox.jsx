@@ -1,6 +1,6 @@
 import React from 'react'
 import ImageContainer from './ImageContainer'
-import ProfileDetails from './profileDetails'
+import ProfileDetails from './ProfileDetails'
 
 
 export default function ImageBox() {
