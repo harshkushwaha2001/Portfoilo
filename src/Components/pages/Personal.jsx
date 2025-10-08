@@ -1,96 +1,133 @@
-import React from 'react'
-import AnimatedBackground from '../AnimatedBackground'
-import { FaCode, FaAward, FaCertificate } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks, SiHackerrank, SiHackerearth, SiCodeforces, SiCodechef } from "react-icons/si";
+import React from "react";
+import {
+  SiHackerrank,
+  SiGeeksforgeeks,
+  SiHackerearth,
+  SiLeetcode,
+  SiCodeforces,
+  SiGithub,
+  SiPostman,
+  SiGoogle,
+} from "react-icons/si";
+import { FaHeart, FaCertificate, FaStar } from "react-icons/fa";
+
 export default function Personal() {
-  
+  // ✅ Profiles list
+  const profiles = [
+    {
+      name: "LeetCode",
+      icon: <SiLeetcode className="text-yellow-400 text-3xl" />,
+      link: "https://leetcode.com/u/Harsh32001/",
+    },
+    {
+      name: "GeeksforGeeks",
+      icon: <SiGeeksforgeeks className="text-green-500 text-3xl" />,
+      link: "https://www.geeksforgeeks.org/user/harshkushwaha32001/",
+    },
+    {
+      name: "HackerRank",
+      icon: <SiHackerrank className="text-green-400 text-3xl" />,
+      link: "https://www.hackerrank.com/profile/harshkushwaha321",
+    },
+    {
+      name: "HackerEarth",
+      icon: <SiHackerearth className="text-blue-400 text-3xl" />,
+      link: "https://www.hackerearth.com/@harshkushwaha32001/",
+    },
+    {
+      name: "Codeforces",
+      icon: <SiCodeforces className="text-red-400 text-3xl" />,
+      link: "https://codeforces.com/profile/Harshkushwaha",
+    },
+    {
+      name: "Postman",
+      icon: <SiPostman className="text-orange-400 text-3xl" />,
+      link: "https://www.postman.com/harsh32001",
+    },
+    {
+      name: "GitHub",
+      icon: <SiGithub className="text-gray-300 text-3xl" />,
+      link: "https://github.com/harshkushwaha2001",
+    },
+    {
+      name: "Holopin",
+      icon: <FaCertificate className="text-purple-400 text-3xl" />,
+      link: "https://www.holopin.io/@harshkushwaha2001#badges",
+    },
+    {
+      name: "Google Developer",
+      icon: <SiGoogle className="text-blue-500 text-3xl" />,
+      link: "https://g.dev/harshkushwaha32001",
+    },
+  ];
+
+  // ✅ Hobbies & Interests
+  const hobbies = [
+    "Exploring emerging technologies & open-source projects",
+    "Competitive programming & problem-solving",
+    "Designing modern UIs & improving performance",
+    "Listening to music and reading tech blogs",
+  ];
+  const ach = [
+     "Solved 500+ problems on LeetCode and GeeksforGeeks",
+     "Completed 5+ projects using Java, Spring Boot, and React",
+     "Earned certifications in AWS Fundamentals and Full-Stack Development",
+     "Hold Position of Responsibility in College Tech Club",
+     "Build RC Plane from scratch as a hobby project in AERO Club",
+     "Conducted coding workshops and hackathons in college",
+     "Regularly participate in coding competitions on Codeforces and HackerRank",
+
+  ]
+
   return (
-     <div className='text-white backdrop-blur-sm bg-blue-400/10 rounded-md w-full h-full flex justify-center items-center delay-50 overflow-y-auto hide-scrollbar'>
-   <div className="min-h-screen  p-10">
-      <div className="max-w-5xl mx-auto">
-        {/* About Me */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4">About Me</h2>
-          <p className="text-gray-300 leading-relaxed">
-            I am a passionate <span className="text-yellow-400 font-semibold">Full Stack Developer</span> 
-            with expertise in building scalable web applications using 
-            <span className="text-green-400"> Java, Spring Boot</span> and 
-            <span className="text-blue-400"> React.js</span>.  
-            I enjoy solving Data Structures and Algorithms problems on various platforms 
-            and have achieved multiple coding badges and certifications.  
-            My goal is to keep learning and contribute to impactful projects.
-          </p>
-        </section>
+    <div className='text-white backdrop-blur-sm bg-blue-400/10 rounded-md w-full h-full overflow-y-auto hide-scrollbar'>
+  <div className="min-h-screen p-10 pt-16 w-full">
+    <div className="max-w-5xl mx-auto">
+          {/* 🌐 Profiles Section */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-6">
+              Profiles
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {profiles.map((profile, index) => (
+                <a
+                  key={index}
+                  href={profile.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center bg-gray-800/70 p-6 rounded-xl text-center shadow-md hover:shadow-blue-500/30 hover:scale-105 transition duration-300"
+                >
+                  {profile.icon}
+                  <h3 className="text-lg font-semibold mt-3">{profile.name}</h3>
+                </a>
+              ))}
+            </div>
+          </section>
 
-        {/* Coding Profiles */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4 flex items-center gap-2">
-            <FaCode /> Coding Profiles
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="https://leetcode.com/yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiLeetcode className="text-yellow-400 text-2xl" /> LeetCode
-            </a>
-            <a href="https://auth.geeksforgeeks.org/user/yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiGeeksforgeeks className="text-green-500 text-2xl" /> GeeksforGeeks
-            </a>
-            <a href="https://www.hackerrank.com/yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiHackerrank className="text-green-400 text-2xl" /> HackerRank
-            </a>
-            <a href="https://www.hackerearth.com/@yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiHackerearth className="text-blue-400 text-2xl" /> HackerEarth
-            </a>
-            <a href="https://codeforces.com/profile/yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiCodeforces className="text-red-400 text-2xl" /> Codeforces
-            </a>
-            <a href="https://www.codechef.com/users/yourusername" target="_blank" className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl hover:bg-gray-700 transition">
-              <SiCodechef className="text-orange-400 text-2xl" /> CodeChef
-            </a>
-          </div>
-        </section>
+          {/* 💖 Hobbies & Interests */}
+          <section>
+            <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4 flex items-center gap-2">
+              <FaStar /> Achievements
+            </h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              {ach.map((hobby, i) => (
+                <li key={i}>{hobby}</li>
+              ))}
+            </ul>
+          </section>
 
-        {/* Skills */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4">Skills & Technologies</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-gray-300">
-            <span className="bg-gray-800 p-2 rounded-lg text-center">Java</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">Spring Boot</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">React.js</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">Node.js</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">MongoDB</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">PostgreSQL</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">Docker</span>
-            <span className="bg-gray-800 p-2 rounded-lg text-center">AWS</span>
-          </div>
-        </section>
-
-        {/* Badges & Achievements */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4 flex items-center gap-2">
-            <FaAward /> Badges & Achievements
-          </h2>
-          <ul className="list-disc list-inside text-gray-300 space-y-2">
-            <li>⭐ 500+ DSA problems solved on LeetCode</li>
-            <li>🏆 4 Star on CodeChef</li>
-            <li>🥇 5 Star in Problem Solving on HackerRank</li>
-            <li>🚀 Specialist Rank on Codeforces</li>
-          </ul>
-        </section>
-
-        {/* Certificates */}
-        <section>
-          <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4 flex items-center gap-2">
-            <FaCertificate /> Certificates
-          </h2>
-          <ul className="list-disc list-inside text-gray-300 space-y-2">
-            <li>Java Programming Masterclass – Udemy (2024)</li>
-            <li>Spring Boot & Microservices – Coursera (2024)</li>
-            <li>AWS Cloud Practitioner – AWS (2023)</li>
-            <li>Data Structures & Algorithms – GeeksforGeeks (2023)</li>
-          </ul>
-        </section>
+           <section>
+            <h2 className="text-3xl font-bold border-b-2 border-gray-700 pb-2 mb-4 flex items-center gap-2 mt-5">
+              <FaHeart /> Hobbies & Interests
+            </h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              {hobbies.map((hobby, i) => (
+                <li key={i}>{hobby}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
-     </div>
-  )
+  );
 }

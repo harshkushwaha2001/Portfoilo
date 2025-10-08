@@ -1,25 +1,25 @@
 import React from 'react'
 import AnimatedBackground from '../AnimatedBackground'
 import { FaJava, FaReact, FaNodeJs, FaDocker, FaAws, FaPython } from "react-icons/fa";
-import { SiSpringboot, SiHibernate, SiPostgresql, SiMongodb, SiKubernetes, SiRedis, SiExpress, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiSpringboot, SiHibernate, SiPostgresql, SiMongodb,SiMysql, SiRedis, SiExpress, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 import SkillCard from '../SkillCard';
 
 export default function Skills() {
   const skills = [
-    { name: "Core Java", level: "Expert", percent: 95, icon: <FaJava /> },
-    { name: "Spring Boot", level: "Advanced", percent: 90, icon: <SiSpringboot /> },
-    { name: "Hibernate", level: "Advanced", percent: 85, icon: <SiHibernate /> },
-    { name: "JSP & Servlets", level: "Intermediate", percent: 75, icon: <FaJava /> },
+    { name: "Core Java", level: "Expert", percent: 90, icon: <FaJava /> },
+    { name: "Spring Boot", level: "Intermediate", percent: 80, icon: <SiSpringboot /> },
+    { name: "Hibernate", level: "Intermediate", percent: 80, icon: <SiHibernate /> },
+    { name: "JSP & Servlets", level: "Intermediate", percent: 70, icon: <FaJava /> },
     { name: "React", level: "Advanced", percent: 85, icon: <FaReact /> },
-    { name: "Node.js", level: "Advanced", percent: 80, icon: <FaNodeJs /> },
-     { name: "Python", level: "Advanced", percent: 80, icon: <FaPython /> },
+    { name: "Node.js", level: "Intermediate", percent: 75, icon: <FaNodeJs /> },
+    { name: "Python", level: "Intermediate", percent: 70, icon: <FaPython /> },
     { name: "Express.js", level: "Intermediate", percent: 75, icon: <SiExpress /> },
-    { name: "MongoDB", level: "Advanced", percent: 85, icon: <SiMongodb /> },
-    { name: "PostgreSQL", level: "Advanced", percent: 85, icon: <SiPostgresql /> },
-    { name: "Redis", level: "Intermediate", percent: 75, icon: <SiRedis /> },
-    { name: "Docker", level: "Advanced", percent: 85, icon: <FaDocker /> },
-    { name: "Kubernetes", level: "Intermediate", percent: 70, icon: <SiKubernetes /> },
-    { name: "AWS", level: "Intermediate", percent: 70, icon: <FaAws /> },
+    { name: "MongoDB", level: "Intermediate", percent: 75, icon: <SiMongodb /> },
+    { name: "PostgreSQL", level: "Intermediate", percent: 80, icon: <SiPostgresql /> },
+    { name: "Redis", level: "Good", percent: 70, icon: <SiRedis /> },
+    { name: "Docker", level: "Good", percent: 75, icon: <FaDocker /> },
+    { name: "MySQL", level: "Intermediate", percent: 85, icon: <SiMysql /> },
+    { name: "AWS", level: "Good", percent: 70, icon: <FaAws /> },
   ];
   return (
      <div className='text-white backdrop-blur-sm bg-blue-400/10 rounded-md w-full h-full flex justify-center items-center delay-50 flex-wrap gap-5 overflow-y-auto hide-scrollbar'>
